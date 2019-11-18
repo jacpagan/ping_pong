@@ -20,13 +20,13 @@ game = Game()
 while game.score < 2 and game.score > -2:
     game.start()
     try:
-        player = int(input('Who scored? 🤔'))
+        winner = int(input('Who scored? 🤔'))
     except ValueError:
         print("Ooops! Invalid entry. ❌")
         break
-    if player == 1: 
+    if winner == 1: 
         game.home_score()
-    elif player == 2:
+    elif winner == 2:
         game.away_score()
     if game.score == 2: 
         print('Home wins! 🎉')
